@@ -34,12 +34,13 @@ sudo add-apt-repository ppa:fossfreedom/byzanz
 sudo apt-get install byzanz
 byzanz-record -d 40 -x 0 -y 0 -w 1200 -h 800 byzanz-demo.gif
 其中：
-• -d 40 为录制的时长为 40 秒
-• -x 0 录制区域的横坐标
-• -y 0 录制区域的纵坐标，记住：屏幕右上角为原点（0,0）
-• -w 400 录制区域的宽度
-• -h 320 录制区域的高度
-• byzanz-demo.gif 保存的文件名
+
+* -d 40 为录制的时长为 40 秒
+* -x 0 录制区域的横坐标
+* -y 0 录制区域的纵坐标，记住：屏幕右上角为原点（0,0）
+* -w 400 录制区域的宽度
+* -h 320 录制区域的高度
+* byzanz-demo.gif 保存的文件名
 
 
 ##others
