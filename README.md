@@ -3,6 +3,16 @@
 ```
 sudo echo -e ":reg_show_sbc:\nuac_registrant" > /dev/udp/192.168.1.1/9988
 ```
+
+##send file with tar && nc
+
+```
+# listen 4545 and save file to /tmp/dir
+nc -l 4545 |tar -C /tmp/dir -zxf
+# send file(mytest) to 192.168. 0.11:44
+ tar -zcvf - mytest|nc 192.168.0.11 4444
+```
+
 ##dump any | lo
 ```
 tcpdump   -i  lo  -s  0  -w /tmp/catch.pcap
