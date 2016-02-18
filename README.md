@@ -53,7 +53,12 @@ byzanz-record -d 40 -x 0 -y 0 -w 1200 -h 800 byzanz-demo.gif
 • -h 320 录制区域的高度
 • byzanz-demo.gif 保存的文件名
 
-
+## 使用aws+chrome+Proxy SwitchyOmega VPN
+监听本地7070, chrome选用SwitchOmega中的GWF list名单，动态选取是否走代理.
+国内名单: http://www.ikay.me/list/gfwlist.txt
+```
+ssh -D 7070  -p22  root@aws_ip
+```
 ## 其它
 
 * C文件生成tags
