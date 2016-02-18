@@ -14,7 +14,17 @@ sudo apt-get remove --purge $(dpkg -l 'linux-*' | sed '/^ii/!d;/'"$(uname -r | s
 curlftpfs ftp://192.168.0.105:3721 /tmp/phone
 ```
 
+## send file with tar && nc
+
+```
+# listen 4545 and save file to /tmp/dir
+nc -l 4545 |tar -C /tmp/dir -zxf
+# send file(mytest) to 192.168. 0.11:44
+ tar -zcvf - mytest|nc 192.168.0.11 4444
+```
+
 ## Install ubuntu
+
 ```
 title Install Ubuntu
 root (hd0,0)
@@ -24,7 +34,6 @@ boot
 
 sudo umount -l /isodevice
 ```
-
 
 ## 软件迁移
 ```
@@ -43,17 +52,21 @@ unzip -O CP936 xxx.zip
 ```
 sudo add-apt-repository ppa:fossfreedom/byzanz
 sudo apt-get install byzanz
+
 byzanz-record -d 40 -x 0 -y 0 -w 1200 -h 800 byzanz-demo.gif
 ```
 其中：
-• -d 40 为录制的时长为 40 秒
-• -x 0 录制区域的横坐标
-• -y 0 录制区域的纵坐标，记住：屏幕右上角为原点（0,0）
-• -w 400 录制区域的宽度
-• -h 320 录制区域的高度
-• byzanz-demo.gif 保存的文件名
+
+* -d 40 为录制的时长为 40 秒
+* -x 0 录制区域的横坐标
+* -y 0 录制区域的纵坐标，记住：屏幕右上角为原点（0,0）
+* -w 400 录制区域的宽度
+* -h 320 录制区域的高度
+* byzanz-demo.gif 保存的文件名
+
 
 ## 使用aws+chrome+Proxy SwitchyOmega VPN
+
 监听本地7070, chrome选用SwitchOmega中的GWF list名单，动态选取是否走代理.
 国内名单: http://www.ikay.me/list/gfwlist.txt
 ```
@@ -62,6 +75,7 @@ ssh -D 7070  -p22  root@aws_ip
 ## 其它
 
 * C文件生成tags
+
 ```
 cscope -qRb
 ```
