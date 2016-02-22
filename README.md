@@ -84,3 +84,7 @@ cscope -qRb
 ```
 mkdir -p project/{lib/ext,bin,src,doc/{html,info,pdf},demo/stat/a}
 ```
+* 命令行下excel转换 (stackoverflow.com/questions/10557360/convert-xlsx-to-csv-in-linux-command-line)
+```
+in2csv data.xlsx > data.csv
+```
